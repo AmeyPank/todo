@@ -6,10 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'todo-list';
-  constructor(){
-    setTimeout(() => {
-      this.title="Changed title";
-    },2000);
-  }
+  title = 'Todo-List With Angular';
+  // constructor(){
+  //   setTimeout(() => {
+  //     this.title="Changed title";
+  //   },2000);
+addTask(item:string){
+console.warn(item);
 }
+}
+

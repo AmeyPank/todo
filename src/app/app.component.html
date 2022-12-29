@@ -1,3 +1,19 @@
-<h1 style="text-align: center;">This is todo list app</h1>
+<head>
+    <link rel="stylesheet" href="app.component.css">
+
+</head>
+
+<body>
+    <p>Now you can add or delete your tasks here</p>
+    <h1 style="color: aquamarine;">{{ title }}</h1>
+    <input type="text" placeholder="ENTER THE TASK HERE" style="text-align: center;" #task />
+    <br>
+    <br>
+    <button (click)="addTask(task.value)">Add New Task </button>
+    <ul *ngFor="let item of list" style="list-style-type: none;">
+        <li> {{item.name}} <button (click)="removeTask(item.id)">Remove</button></li>
+
+    </ul>
 
     <app-todos></app-todos>
+</body>
